@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-//IBOutlets
 
 @interface CCViewController : UIViewController
+
+//iVars
+@property (nonatomic) CGPoint currentPoint;
+@property (strong, nonatomic) NSArray *tiles;
+
+//IBOutlets
+
+
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (strong, nonatomic) IBOutlet UILabel *healthLabel;
 @property (strong, nonatomic) IBOutlet UILabel *damageLabel;

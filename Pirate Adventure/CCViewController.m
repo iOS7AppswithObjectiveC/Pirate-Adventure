@@ -7,6 +7,8 @@
 //
 
 #import "CCViewController.h"
+#import "CCFactory.h"
+#import "CCTile.h"
 
 @interface CCViewController ()
 
@@ -17,8 +19,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	CCFactory *factory = [[CCFactory alloc] init];
+    self.tiles = [factory tiles];
+    self.currentPoint = CGPointMake(0, 0);
+    [self updateTile];
+    [self updateButton];
+    
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -26,18 +36,70 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)actionButtonpressed:(UIButton *)sender {
+- (IBAction)actionButtonpressed:(UIButton *)sender
+{
+    
+    
 }
 
-- (IBAction)northButtonPressed:(UIButton *)sender {
+- (IBAction)northButtonPressed:(UIButton *)sender
+{
+    self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y +1);
+    
+    [self updateButton];
+    [self updateTile];
+    
 }
 
-- (IBAction)eastButtonPressed:(UIButton *)sender {
+- (IBAction)eastButtonPressed:(UIButton *)sender
+{
+     self.currentPoint = CGPointMake(self.currentPoint.x +1, self.currentPoint.y);
+    
+    [self updateButton];
+    [self updateTile];
 }
 
-- (IBAction)southButtonPressed:(UIButton *)sender {
+- (IBAction)southButtonPressed:(UIButton *)sender
+{
+    
+     self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y -1);
+
+    [self updateButton];
+    [self updateTile];
 }
 
-- (IBAction)westButtonPressed:(UIButton *)sender {
+- (IBAction)westButtonPressed:(UIButton *)sender
+{
+     self.currentPoint = CGPointMake(self.currentPoint.x -1, self.currentPoint.y);
+    
+    [self updateButton];
+    [self updateTile];
+    
 }
+
+-(void)updateTile
+{
+    CCTile *tileModel = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
+    self.storyLabel.text = tileModel.story;
+    self.backgroundImageView.image = tileModel.backgroundImage;
+}
+
+-(void)updateButton
+{
+    self.westButton.hidden = [self tileExistsAtPoint:CGPointMake(self.currentPoint.x -1, self.currentPoint.y)];
+    self.eastButton.hidden = [self tileExistsAtPoint:CGPointMake(self.currentPoint.x +1, self.currentPoint.y)];
+    self.northButton.hidden = [self tileExistsAtPoint:CGPointMake(self.currentPoint.x, self.currentPoint.y +1)];
+    self.southButton.hidden = [self tileExistsAtPoint:CGPointMake(self.currentPoint.x, self.currentPoint.y -1)];
+    
+}
+
+-(BOOL)tileExistsAtPoint:(CGPoint)point
+{
+    if (point.y >=0 && point.x >=0 && point.x < [self.tiles count]&& point.y < [[self.tiles objectAtIndex:point.x] count]){
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
 @end
