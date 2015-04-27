@@ -21,6 +21,7 @@
     [super viewDidLoad];
 	CCFactory *factory = [[CCFactory alloc] init];
     self.tiles = [factory tiles];
+    self.character = [factory character];
     self.currentPoint = CGPointMake(0, 0);
     [self updateTile];
     [self updateButton];
@@ -82,6 +83,14 @@
     CCTile *tileModel = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
     self.storyLabel.text = tileModel.story;
     self.backgroundImageView.image = tileModel.backgroundImage;
+    self.healthLabel.text = [NSString stringWithFormat:@"%i", self.character.health];
+    self.damageLabel.text = [NSString stringWithFormat:@"%i", self.character.damage];
+    self.armorLabel.text = self.character.armor.name;
+    self.weaponLabel.text = self.character.weapon.name;
+    
+    
+    
+    
 }
 
 -(void)updateButton

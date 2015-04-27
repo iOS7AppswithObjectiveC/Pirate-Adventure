@@ -99,4 +99,20 @@
     
 }
 
+-(CCCharacter *)character
+{
+    CCCharacter *character = [[CCCharacter alloc] init];
+    character.health = 100;
+    CCArmor *armor = [[CCArmor alloc] init];
+    armor.name = @"Cloak";
+    character.armor = armor;
+    
+    CCWeapon *weapon = [[CCWeapon alloc] init];
+    weapon.name = @"Fists";
+    weapon.damage = 10;
+    character.weapon = weapon;
+    
+    return character;
+}
+
 @end

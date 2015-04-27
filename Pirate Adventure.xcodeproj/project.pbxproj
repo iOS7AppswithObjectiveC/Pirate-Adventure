@@ -36,6 +36,7 @@
 		2CC4F1AC1AEEF5C600B6B471 /* PirateWeapons.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2CC4F1A11AEEF5C600B6B471 /* PirateWeapons.jpeg */; };
 		2CC4F1AF1AEEFB1500B6B471 /* CCWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC4F1AE1AEEFB1500B6B471 /* CCWeapon.m */; };
 		2CC4F1B21AEEFC4F00B6B471 /* CCArmor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC4F1B11AEEFC4F00B6B471 /* CCArmor.m */; };
+		2CC4F1B51AEEFCFB00B6B471 /* CCCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC4F1B41AEEFCFB00B6B471 /* CCCharacter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		2CC4F1AE1AEEFB1500B6B471 /* CCWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCWeapon.m; sourceTree = "<group>"; };
 		2CC4F1B01AEEFC4F00B6B471 /* CCArmor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCArmor.h; sourceTree = "<group>"; };
 		2CC4F1B11AEEFC4F00B6B471 /* CCArmor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCArmor.m; sourceTree = "<group>"; };
+		2CC4F1B31AEEFCFB00B6B471 /* CCCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCharacter.h; sourceTree = "<group>"; };
+		2CC4F1B41AEEFCFB00B6B471 /* CCCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCharacter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +211,8 @@
 				2CC4F1911AEEE6BB00B6B471 /* CCTile.m */,
 				2CC4F1901AEEE6BB00B6B471 /* CCTile.h */,
 				2CC4F1961AEEE7CD00B6B471 /* Factory */,
+				2CC4F1B31AEEFCFB00B6B471 /* CCCharacter.h */,
+				2CC4F1B41AEEFCFB00B6B471 /* CCCharacter.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				2CC4F16B1AEEDD1A00B6B471 /* CCAppDelegate.m in Sources */,
 				2CC4F1951AEEE7AC00B6B471 /* CCFactory.m in Sources */,
 				2CC4F1671AEEDD1A00B6B471 /* main.m in Sources */,
+				2CC4F1B51AEEFCFB00B6B471 /* CCCharacter.m in Sources */,
 				2CC4F1711AEEDD1A00B6B471 /* CCViewController.m in Sources */,
 				2CC4F1921AEEE6BB00B6B471 /* CCTile.m in Sources */,
 				2CC4F1B21AEEFC4F00B6B471 /* CCArmor.m in Sources */,
