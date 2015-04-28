@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1E02211AEF1F8700F4FE1A /* CCBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1E02201AEF1F8700F4FE1A /* CCBoss.m */; };
 		2CC4F15B1AEEDD1A00B6B471 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC4F15A1AEEDD1A00B6B471 /* Foundation.framework */; };
 		2CC4F15D1AEEDD1A00B6B471 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC4F15C1AEEDD1A00B6B471 /* CoreGraphics.framework */; };
 		2CC4F15F1AEEDD1A00B6B471 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC4F15E1AEEDD1A00B6B471 /* UIKit.framework */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C1E021F1AEF1F8700F4FE1A /* CCBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBoss.h; path = "Pirate Adventure/CCBoss.h"; sourceTree = "<group>"; };
+		2C1E02201AEF1F8700F4FE1A /* CCBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBoss.m; path = "Pirate Adventure/CCBoss.m"; sourceTree = "<group>"; };
 		2CC4F1571AEEDD1A00B6B471 /* Pirate Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pirate Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC4F15A1AEEDD1A00B6B471 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2CC4F15C1AEEDD1A00B6B471 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -204,6 +207,8 @@
 		2CC4F18F1AEEE69500B6B471 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2C1E021F1AEF1F8700F4FE1A /* CCBoss.h */,
+				2C1E02201AEF1F8700F4FE1A /* CCBoss.m */,
 				2CC4F1AD1AEEFB1500B6B471 /* CCWeapon.h */,
 				2CC4F1B01AEEFC4F00B6B471 /* CCArmor.h */,
 				2CC4F1B11AEEFC4F00B6B471 /* CCArmor.m */,
@@ -343,6 +348,7 @@
 				2CC4F1921AEEE6BB00B6B471 /* CCTile.m in Sources */,
 				2CC4F1B21AEEFC4F00B6B471 /* CCArmor.m in Sources */,
 				2CC4F1AF1AEEFB1500B6B471 /* CCWeapon.m in Sources */,
+				2C1E02211AEF1F8700F4FE1A /* CCBoss.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +553,7 @@
 				2CC4F18B1AEEDD1A00B6B471 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CC4F18C1AEEDD1A00B6B471 /* Build configuration list for PBXNativeTarget "Pirate AdventureTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +562,7 @@
 				2CC4F18E1AEEDD1A00B6B471 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
