@@ -22,7 +22,10 @@
 	CCFactory *factory = [[CCFactory alloc] init];
     self.tiles = [factory tiles];
     self.character = [factory character];
+    self.boss = [factory boss];
+    
     self.currentPoint = CGPointMake(0, 0);
+    
     [self updateCharacterStatsForArmor:nil withWeapons:nil withHealthEffect:0];
     [self updateTile];
     [self updateButton];
@@ -41,7 +44,21 @@
 - (IBAction)actionButtonpressed:(UIButton *)sender
 {
     CCTile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
+    
+    if (tile.healthEffect == -15){
+        self.boss.health = self.boss.health - self.character.damage;
+    }
     [self updateCharacterStatsForArmor:tile.armor withWeapons:tile.weapon withHealthEffect:tile.healthEffect];
+    
+    if(self.character.health <= 0)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Death Message" message:@"You have died please restart the game!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alertView show];
+    }
+    else if(self.boss.health <= 0){
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Victory Message" message:@"You have defeated the Pirate Boss!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alertView show];
+    }
     [self updateTile];
 }
 
@@ -77,6 +94,15 @@
     
     [self updateButton];
     [self updateTile];
+    
+}
+
+- (IBAction)resetButtonPressed:(UIButton *)sender
+{
+    
+    self.character = nil;
+    self.boss = nil;
+    [self viewDidLoad];
     
 }
 

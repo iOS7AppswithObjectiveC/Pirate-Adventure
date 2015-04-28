@@ -41,6 +41,7 @@
 - (IBAction)eastButtonPressed:(UIButton *)sender;
 - (IBAction)southButtonPressed:(UIButton *)sender;
 - (IBAction)westButtonPressed:(UIButton *)sender;
+- (IBAction)resetButtonPressed:(UIButton *)sender;
 
 
 
